@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick-theme.css" />
+  
+  
+  
+</head>
+
+</div>
+
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  body {
+    background: #c8e6c9;
+  }
+
+  #wrap {
+    width: 1000px;
+    height: 700px;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+  }
+
+  #header {
+    width: 1000px;
+    height: 50px;
+    line-height: 50px;
+  }
+
+  #nav {
+    width: 1000px;
+    height: 50px;
+    background: rgb(180, 180, 100);
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 9999;
+  }
+
+  .one>li {
+    float: left;
+    width: 200px;
+  }
+
+  .one ul {
+    display: none;
+    position: absolute;
+  }
+
+  .one li:hover>ul {
+    display: block;
+  }
+
+  .one>li>ul {
+    background: rgb(156, 197, 122);
+  }
+
+  .one>li>ul>li {
+    width: 200px;
+  }
+
+  ul li a {
+    font-size: 20px;
+    text-decoration: none;
+    line-height: 50px;
+    text-align: center;
+    display: block;
+  }
+
+  #contents {
+    width: 1000px;
+    height: 600px;
+    line-height: 600px;
+    background: blue;
+  }
+
+  #footer {
+    width: 1000px;
+    height: 170px;
+    background: #3c3935;
+  }
+
+  #footer img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-top: 40px;
+  }
+
+  #footerdiv1 {
+    line-height: 110px;
+    border: 1px solid yellow;
+    float: left;
+  }
+
+  #footerdiv2 {
+    border: 1px solid blue;
+    height: 165px;    
+    margin-left: 90px;
+  }
+
+  #footerdiv2 img {
+    width: 25px;
+    height: 25px;
+    margin-top: 10px;
+  }
+
+  #footerdiv2 span {
+    top: 100px;
+    border: 1px solid red;
+    font-size: 15px;    
+    color: white;
+  }
+
+  #footerdiv2 p {
+    margin-top: 5px;
+    color: white;
+    font-size: 15px;
+  }
+
+</style>
+
+
+<body>
+  <div id="wrap">
+    <div id="header">HEADER</div>
+    <div id="nav">
+      <ul class="one">
+        <li>
+          <a href="#">상1</a>
+          <ul>
+            <li><a href="#">하1</a></li>
+            <li><a href="#">하1</a></li>
+            <li><a href="#">하1</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">상2</a>
+          <ul>
+            <li><a href="#">하2</a></li>
+            <li><a href="#">하2</a></li>
+            <li><a href="#">하2</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">상3</a>
+          <ul>
+            <li><a href="#">하3</a></li>
+            <li><a href="#">하3</a></li>
+            <li><a href="#">하3</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">상4</a>
+          <ul>
+            <li><a href="#">하4</a></li>
+            <li><a href="#">하4</a></li>
+            <li><a href="#">하4</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">상5</a>
+          <ul>
+            <li><a href="#">하5</a></li>
+            <li><a href="#">하5</a></li>
+            <li><a href="#">하5</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div id="contents">
+      <div class="imgslick">
+        <div><a href="#"><img src="./img/moon.jpg" alt="moon" width="1000px;"  height="600px;" /></a></div>
+        <div><a href="#"><img src="./img/sea.jpg" alt="sea" width="1000px;" height="600px;" /></a></div>        
+      </div>
+    </div>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick-1.8.1/slick/slick.min.js"></script>
+    
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('.imgslick').slick({
+          infinite: true, //양방향 무한 모션
+          speed: 2000, // 슬라이드 스피드
+          autoplay: true, //자동플레이 유무( false시 자동플레이 안됨 )
+          autoplaySpeed: 1500, // 자동플레이 스피드
+          slidesToShow: 1, //한 화면에 보여줄 아이템수          
+          arrows: false //좌우 화살 버튼 노출 여부 ( false 시 안보임 )
+        });
+      });
+    </script>
+    <div id="footer">
+      <div id="footerdiv1">
+        <img src="./img/sea.jpg" alt="">
+      </div>
+      <div id="footerdiv2">        
+        <span>YJSHIN</span><span> | </span>
+        <span>대표: YJUN</span><span> | </span>
+        <span>사업자등록번호 : 000-00-00000</span>
+        <p>주소: 대한민국 서울특별시 용산구</p>
+        <p>yjshin.tistory.com</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
